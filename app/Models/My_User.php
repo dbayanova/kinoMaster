@@ -4,13 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\My_User;
+use App\Models\Favorite_medias;
 
-class Favorite_medias extends Model
+class My_User extends Model
 {
     use HasFactory;
-    public function users()
+    public function favorite_medias()
     {
-        return $this->belongsTo(My_User::class);
+        return $this->hasMany(Favorite_medias::class);
     }
 }
